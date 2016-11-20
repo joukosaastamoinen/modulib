@@ -1,0 +1,25 @@
+{
+  "name": "audiate-cli",
+  "version": "0.1.0",
+  "repository": "git@github.com:joukosaastamoinen/audiate",
+  "scripts": {
+    "lint": "../node_modules/.bin/eslint 'src/**/*.js' 'test/**/*.js'"
+  },
+  "description": "Play tracks created with Audiate",
+  "main": "src/index.js",
+  "keywords": [
+    "audio",
+    "sound",
+    "generative",
+    "art"
+  ],
+  "author": "Jouko Saastamoinen <joukosaastamoinen@gmail.com>",
+  "license": "MIT",
+  "preferGlobal": true,
+  "bin": {
+    "audiate": "src/index.js"
+  },
+  "dependencies": {
+    "speaker": "0.3.0"
+  }
+}

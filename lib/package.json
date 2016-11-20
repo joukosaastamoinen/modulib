@@ -1,0 +1,22 @@
+{
+  "name": "audiate",
+  "version": "1.0.0",
+  "description": "Modular synthesis with JavaScript",
+  "repository": "git@github.com:joukosaastamoinen/audiate.git",
+  "scripts": {
+    "test": "tape 'test/**/*.test.js' | tap-dot",
+    "watch": "nodemon -q -x 'npm test'",
+    "lint": "../node_modules/.bin/eslint 'src/**/*.js' 'test/**/*.js'"
+  },
+  "author": "Jouko Saastamoinen <joukosaastamoinen@gmail.com>",
+  "license": "MIT",
+  "main": "src/index.js",
+  "devDependencies": {
+    "nodemon": "1.9.2",
+    "tap-dot": "1.0.5",
+    "tape": "4.5.1"
+  },
+  "dependencies": {
+    "ramda": "0.21.0"
+  }
+}
