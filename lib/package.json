@@ -16,7 +16,5 @@
     "tap-dot": "1.0.5",
     "tape": "4.5.1"
   },
-  "dependencies": {
-    "ramda": "0.21.0"
-  }
+  "dependencies": {}
 }
