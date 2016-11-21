@@ -3,8 +3,7 @@
   "description": "Examples of using Audiate to create generative audio",
   "repository": "git@github.com:joukosaastamoinen/audiate",
   "dependencies": {
-    "audiate": "0.0.1",
-    "ramda": "0.22.1"
+    "audiate": "0.0.1"
   },
   "author": "Jouko Saastamoinen <joukosaastamoinen@gmail.com>",
   "license": "MIT"
