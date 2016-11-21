@@ -1,12 +1,15 @@
-const {constant, sine, amp, ad, periodic} = require('audiate')
+const {constant, sine, amp, ad, metronome} = require('audiate')
+
+const bpm = 120
+const tempo = constant(bpm / 60)
 
 module.exports = () => sine(
   amp(
-    constant(200),
+    constant(300),
     ad(
-      constant(0.001),
       constant(0.1),
-      periodic(constant(0.5))
+      constant(0.2),
+      metronome(tempo)
     )
   )
 )
