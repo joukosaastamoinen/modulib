@@ -1,6 +1,6 @@
 {
   "name": "audiate",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Modular synthesis with JavaScript",
   "repository": "git@github.com:joukosaastamoinen/audiate.git",
   "scripts": {

@@ -1,10 +1,9 @@
 {
   "name": "test",
-  "version": "1.0.0",
   "description": "Examples of using Audiate to create generative audio",
   "repository": "git@github.com:joukosaastamoinen/audiate",
   "dependencies": {
-    "audiate": "1.0.0",
+    "audiate": "0.0.1",
     "ramda": "0.22.1"
   },
   "author": "Jouko Saastamoinen <joukosaastamoinen@gmail.com>",
