@@ -10,7 +10,8 @@ const Audio = process.argv[2] ?
   require(path.join(process.cwd(), process.argv[2])) :
   require(process.cwd())
 
-const audio = Audio()(1 / sampleRate)
+const timeStep = 1 / sampleRate
+const audio = Audio()()
 
 const readable = new Readable()
 readable.bitDepth = 16
@@ -28,7 +29,7 @@ function read (n) {
   const amplitude = 32760 // Max amplitude for 16-bit audio
 
   for (let i = 0; i < numSamples; i++) {
-    const val = audio() * amplitude
+    const val = audio(timeStep) * amplitude
     for (let channel = 0; channel < this.channels; channel++) {
       const offset = (i * sampleSize * this.channels) + (channel * sampleSize)
       buf['writeInt' + this.bitDepth + 'LE'](val, offset)
