@@ -4,7 +4,7 @@
   "description": "Modular synthesis with JavaScript",
   "repository": "git@github.com:joukosaastamoinen/audiate.git",
   "scripts": {
-    "test": "tape 'test/**/*.test.js' | tap-dot",
+    "test": "tape 'src/**/*.test.js' | tap-dot",
     "watch": "nodemon -q -x 'npm test'",
     "lint": "../node_modules/.bin/eslint 'src/**/*.js' 'test/**/*.js'",
     "perf": "node perf/index.js"
