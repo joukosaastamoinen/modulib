@@ -6,7 +6,8 @@
   "scripts": {
     "test": "tape 'test/**/*.test.js' | tap-dot",
     "watch": "nodemon -q -x 'npm test'",
-    "lint": "../node_modules/.bin/eslint 'src/**/*.js' 'test/**/*.js'"
+    "lint": "../node_modules/.bin/eslint 'src/**/*.js' 'test/**/*.js'",
+    "perf": "node perf/index.js"
   },
   "author": "Jouko Saastamoinen <joukosaastamoinen@gmail.com>",
   "license": "MIT",
