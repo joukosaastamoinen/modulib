@@ -2,6 +2,7 @@ const {constant, sine, amp, ad, metronome} = require('audiate')
 
 const bpm = 120
 const tempo = constant(bpm / 60)
+const click = metronome(tempo)
 
 module.exports = () => sine(
   amp(
@@ -9,7 +10,8 @@ module.exports = () => sine(
     ad(
       constant(0.1),
       constant(0.2),
-      metronome(tempo)
+      click
     )
-  )
+  ),
+  click
 )
