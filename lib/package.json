@@ -16,7 +16,7 @@
     "extend-tape": "1.2.0",
     "nodemon": "1.9.2",
     "tap-dot": "1.0.5",
-    "tape": "4.5.1"
+    "tape": "4.8.0"
   },
   "dependencies": {}
 }
