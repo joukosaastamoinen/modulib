@@ -18,7 +18,7 @@ const play = Audio => {
     const sampleSize = this.bitDepth / 8
     const blockAlign = sampleSize * this.channels
     const numSamples = n / blockAlign | 0
-    const buf = new Buffer(numSamples * blockAlign)
+    const buf = Buffer.alloc(numSamples * blockAlign)
     const amplitude = 32760 // Max amplitude for 16-bit audio
 
     for (let i = 0; i < numSamples; i++) {
