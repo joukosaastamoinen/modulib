@@ -1,10 +1,10 @@
-const {constant, sine, amp, ad, metronome} = require('audiate')
+import {constant, sine, amp, ad, metronome} from 'audiate'
 
 const bpm = 120
 const tempo = constant(bpm / 60)
 const click = metronome(tempo)
 
-module.exports = () => sine(
+export default () => sine(
   amp(
     constant(300),
     ad(

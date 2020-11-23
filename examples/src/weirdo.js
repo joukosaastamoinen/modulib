@@ -1,6 +1,6 @@
-const {constant, sine, triangle, amp} = require('audiate')
+import {constant, sine, triangle, amp} from 'audiate'
 
-module.exports = () =>
+export default () =>
   triangle(
     amp(
       constant(220),

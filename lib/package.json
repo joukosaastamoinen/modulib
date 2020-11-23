@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Modular synthesis with JavaScript",
   "repository": "git@github.com:joukosaastamoinen/audiate.git",
+  "type": "module",
   "scripts": {
     "test": "tape 'src/**/*.test.js' | tap-dot",
     "watch": "nodemon -q -x 'npm test'",

@@ -2,6 +2,7 @@
   "name": "audiate-cli",
   "version": "0.1.0",
   "repository": "git@github.com:joukosaastamoinen/audiate",
+  "type": "module",
   "scripts": {
     "lint": "../node_modules/.bin/eslint 'src/**/*.js' 'test/**/*.js'"
   },

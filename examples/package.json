@@ -2,6 +2,7 @@
   "name": "test",
   "description": "Examples of using Audiate to create generative audio",
   "repository": "git@github.com:joukosaastamoinen/audiate",
+  "type": "module",
   "dependencies": {
     "audiate": "0.0.1"
   },

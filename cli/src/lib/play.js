@@ -1,5 +1,5 @@
-const Readable = require('stream').Readable
-const Speaker = require('speaker')
+import {Readable} from 'stream'
+import Speaker from 'speaker'
 
 const play = Audio => {
   const sampleRate = 44100
@@ -33,4 +33,4 @@ const play = Audio => {
   }
 }
 
-module.exports = play
+export default play

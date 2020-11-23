@@ -1,3 +1,3 @@
-const {constant, sine} = require('audiate')
+import {constant, sine} from 'audiate'
 
-module.exports = () => sine(constant(440))
+export default () => sine(constant(440))
