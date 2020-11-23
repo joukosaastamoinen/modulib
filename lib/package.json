@@ -14,9 +14,9 @@
   "main": "src/index.js",
   "devDependencies": {
     "extend-tape": "1.2.0",
-    "nodemon": "1.9.2",
-    "tap-dot": "1.0.5",
-    "tape": "4.8.0",
+    "nodemon": "2.0.6",
+    "tap-dot": "2.0.0",
+    "tape": "5.0.1",
     "tape-catch": "1.0.6"
   },
   "dependencies": {}
