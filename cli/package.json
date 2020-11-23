@@ -20,6 +20,6 @@
     "audiate": "src/index.js"
   },
   "dependencies": {
-    "speaker": "0.3.0"
+    "speaker": "0.5.2"
   }
 }
