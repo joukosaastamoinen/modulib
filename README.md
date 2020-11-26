@@ -6,19 +6,19 @@ with it.
 
 Creating patches with code is awesome, because:
 
-*   **It's powerful;** wire up 100 oscillators through filters to a mixer with
-    a few lines of code. No manual wiring needed.
-*   **It's limiting;** there are no presets to drown in or a gazillion plugins
-    to buy. Just focus on the sound.
-*   **It's different;** acoustic instruments and analog synthesizers have their
-    own sound. The computer has its own sound too, expressed in code.
+- **It's powerful;** wire up 100 oscillators through filters to a mixer with
+  a few lines of code. No manual wiring needed.
+- **It's limiting;** there are no presets to drown in or a gazillion plugins
+  to buy. Just focus on the sound.
+- **It's different;** acoustic instruments and analog synthesizers have their
+  own sound. The computer has its own sound too, expressed in code.
 
 ## Quick start
 
 To start making patches with Audiate, you need:
 
-*   [A code editor](https://atom.io/)
-*   [Node.js](https://nodejs.org/en/)
+- [A code editor](https://atom.io/)
+- [Node.js](https://nodejs.org/en/)
 
 When you've installed Node.js, open up a terminal and install the `audiate`
 command line tool:

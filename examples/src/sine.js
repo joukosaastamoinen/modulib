@@ -1,3 +1,3 @@
-import {constant, sine} from 'audiate'
+import { constant, sine } from "audiate";
 
-export default () => sine(constant(440))
+export default () => sine(constant(440));
