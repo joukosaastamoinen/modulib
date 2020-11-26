@@ -5,7 +5,7 @@
   "repository": "git@github.com:joukosaastamoinen/audiate.git",
   "type": "module",
   "scripts": {
-    "test": "tape 'src/**/*.test.js' | tap-dot",
+    "test": "node test/run-tests.js | tap-dot",
     "watch": "nodemon -q -x 'npm test'",
     "lint": "../node_modules/.bin/eslint 'src/**/*.js' 'test/**/*.js'",
     "perf": "node perf/index.js"
