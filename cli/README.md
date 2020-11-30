@@ -1,6 +1,8 @@
 # Modulib CLI
 
-1. Clone repo
-2. `npm install`
-3. `npm link`
-4. `play-patch my-patch.js`
+Use the Modulib command line tool to play patches created with the Modulib library.
+
+```
+npm install -g modulib-cli
+play-patch my-patch.js
+```
