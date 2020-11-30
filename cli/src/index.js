@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 import path from "path";
-import play from "./lib/play.js";
+import play from "./play.js";
 
 const songPath = process.argv[2]
   ? path.join(process.cwd(), process.argv[2])
