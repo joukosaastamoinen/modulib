@@ -1,4 +1,4 @@
-import { constant, sine, triangle, amp } from "audiate";
+import { constant, sine, triangle, amp } from "modulib";
 
 export default () =>
   triangle(

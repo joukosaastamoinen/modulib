@@ -1,4 +1,4 @@
-# Audiate library
+# Modulib library
 
 ```
 npm install

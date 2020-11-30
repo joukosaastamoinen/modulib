@@ -1,10 +1,10 @@
 {
-  "name": "test",
-  "description": "Examples of using Audiate to create generative audio",
-  "repository": "git@github.com:joukosaastamoinen/audiate",
+  "name": "modulib-examples",
+  "description": "Examples of using Modulib to create generative audio",
+  "repository": "git@github.com:joukosaastamoinen/modulib",
   "type": "module",
   "dependencies": {
-    "audiate": "0.0.1"
+    "modulib": "0.0.1"
   },
   "author": "Jouko Saastamoinen <joukosaastamoinen@gmail.com>",
   "license": "MIT"

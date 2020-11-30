@@ -1,4 +1,4 @@
-import { constant, sine, amp, ad, metronome } from "audiate";
+import { constant, sine, amp, ad, metronome } from "modulib";
 
 const bpm = 120;
 const tempo = constant(bpm / 60);

@@ -1,3 +1,3 @@
-import { constant, sine } from "audiate";
+import { constant, sine } from "modulib";
 
 export default () => sine(constant(440));

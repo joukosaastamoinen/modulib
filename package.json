@@ -1,4 +1,5 @@
 {
+  "name": "modulib-monorepo",
   "private": true,
   "license": "MIT",
   "devDependencies": {

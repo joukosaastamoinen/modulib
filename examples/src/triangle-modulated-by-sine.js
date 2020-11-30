@@ -1,4 +1,4 @@
-import { constant, sine, triangle, amp } from "audiate";
+import { constant, sine, triangle, amp } from "modulib";
 
 const mod = amp(constant(220), sine(constant(3.7)));
 

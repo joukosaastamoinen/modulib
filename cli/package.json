@@ -1,12 +1,12 @@
 {
-  "name": "audiate-cli",
-  "version": "0.1.0",
-  "repository": "git@github.com:joukosaastamoinen/audiate",
+  "name": "modulib-cli",
+  "version": "0.0.1",
+  "repository": "git@github.com:joukosaastamoinen/modulib",
   "type": "module",
   "scripts": {
     "lint": "../node_modules/.bin/eslint 'src/**/*.js' 'test/**/*.js'"
   },
-  "description": "Play tracks created with Audiate",
+  "description": "Play patches created with Modulib",
   "main": "src/index.js",
   "keywords": [
     "audio",
@@ -18,7 +18,7 @@
   "license": "MIT",
   "preferGlobal": true,
   "bin": {
-    "audiate": "src/index.js"
+    "play-patch": "src/index.js"
   },
   "dependencies": {
     "speaker": "0.5.2"

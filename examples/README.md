@@ -1,7 +1,7 @@
-# Audiate examples
+# Modulib examples
 
 ```
 npm install
-npm install -g audiate
-audiate src/{testfile name}
+npm install -g modulib-cli
+play-patch src/{testfile name}
 ```

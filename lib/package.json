@@ -1,8 +1,8 @@
 {
-  "name": "audiate",
+  "name": "modulib",
   "version": "0.0.1",
   "description": "Modular synthesis with JavaScript",
-  "repository": "git@github.com:joukosaastamoinen/audiate.git",
+  "repository": "git@github.com:joukosaastamoinen/modulib.git",
   "type": "module",
   "scripts": {
     "test": "node test/run-tests.js | tap-dot",
