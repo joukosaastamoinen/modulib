@@ -21,6 +21,7 @@
     "play-patch": "src/index.js"
   },
   "dependencies": {
+    "modulib": "0.0.2",
     "speaker": "0.5.2"
   }
 }

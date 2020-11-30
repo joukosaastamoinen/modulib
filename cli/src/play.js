@@ -1,10 +1,9 @@
 import { Readable } from "stream";
 import Speaker from "speaker";
 
-const play = (Audio) => {
+const play = (audio) => {
   const sampleRate = 44100;
   const timeStep = 1 / sampleRate;
-  const audio = Audio()();
 
   const readable = new Readable({ highWaterMark: 512 });
   readable.bitDepth = 16;
