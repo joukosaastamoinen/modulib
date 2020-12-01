@@ -6,7 +6,7 @@ const play = (Audio) => {
   const timeStep = 1 / sampleRate;
   const audio = Audio()();
 
-  const readable = new Readable();
+  const readable = new Readable({ highWaterMark: 512 });
   readable.bitDepth = 16;
   readable.channels = 2;
   readable.sampleRate = sampleRate;
