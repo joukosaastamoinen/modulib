@@ -11,7 +11,8 @@ const play = (audio) => {
   readable.sampleRate = sampleRate;
   readable._read = read;
 
-  readable.pipe(new Speaker());
+  const speaker = new Speaker();
+  readable.pipe(speaker);
 
   function read(n) {
     const sampleSize = this.bitDepth / 8;
@@ -30,6 +31,12 @@ const play = (audio) => {
 
     this.push(buf);
   }
+
+  return () =>
+    new Promise((resolve) => {
+      speaker.once("close", resolve);
+      speaker.end();
+    });
 };
 
 export default play;

@@ -1,15 +1,26 @@
 #! /usr/bin/env node
 
+import fs from "fs";
 import path from "path";
-import { constant } from "modulib";
-import play from "./play.js";
 import Keyboard from "./keyboard.js";
+import playPatch from "./play-patch.js";
 
-const songPath = process.argv[2]
+const { frequency, trigger } = Keyboard(process.stdin);
+
+const patchPath = process.argv[2]
   ? path.join(process.cwd(), process.argv[2])
   : process.cwd();
 
-const inputs = process.argv.slice(3);
+const inputs = process.argv.slice(3).map((input) => {
+  switch (input) {
+    case "frequency":
+      return frequency;
+    case "trigger":
+      return trigger;
+    default:
+      return constant(parseFloat(input));
+  }
+});
 
 process.stdin.setRawMode(true);
 process.stdin.on("data", function (data) {
@@ -18,20 +29,18 @@ process.stdin.on("data", function (data) {
   }
 });
 
-const { frequency, trigger } = Keyboard(process.stdin);
+let stop = playPatch(patchPath, inputs);
+let restarting = false;
 
-import(songPath).then(({ default: Audio }) => {
-  const audio = Audio(
-    ...inputs.map((input) => {
-      switch (input) {
-        case "frequency":
-          return frequency;
-        case "trigger":
-          return trigger;
-        default:
-          return constant(parseFloat(input));
-      }
-    })
-  )();
-  play(audio);
+fs.watch(patchPath, {}, (event) => {
+  if (event === "change") {
+    if (restarting) {
+      return;
+    }
+    restarting = true;
+    stop().then(() => {
+      stop = playPatch(patchPath, inputs);
+      restarting = false;
+    });
+  }
 });
