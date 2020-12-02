@@ -21,27 +21,71 @@ const notes = {
 const Keyboard = (tty) => {
   const frequency = () => {
     let frequency = 0;
+    let listening = false;
+    let timeout = null;
 
-    tty.on("data", (data) => {
+    const handler = (data) => {
       const newFrequency = notes[data[0]];
       if (newFrequency !== undefined) {
         frequency = newFrequency;
       }
-    });
+    };
 
-    return () => frequency;
+    const ensureListening = () => {
+      if (!listening) {
+        listening = true;
+        tty.on("data", handler);
+      }
+
+      if (timeout) {
+        clearTimeout(timeout);
+      }
+      timeout = setTimeout(() => {
+        timeout = null;
+        if (listening) {
+          tty.off("data", handler);
+          listening = false;
+        }
+      }, 1000);
+    };
+
+    return () => {
+      ensureListening();
+      return frequency;
+    };
   };
 
   const trigger = () => {
     let keyPressed = false;
+    let listening = false;
+    let timeout = null;
 
-    tty.on("data", (data) => {
+    const handler = (data) => {
       if (notes[data[0]] !== undefined) {
         keyPressed = true;
       }
-    });
+    };
+
+    const ensureListening = () => {
+      if (!listening) {
+        listening = true;
+        tty.on("data", handler);
+      }
+
+      if (timeout) {
+        clearTimeout(timeout);
+      }
+      timeout = setTimeout(() => {
+        timeout = null;
+        if (listening) {
+          tty.off("data", handler);
+          listening = false;
+        }
+      }, 1000);
+    };
 
     return () => {
+      ensureListening();
       if (keyPressed) {
         keyPressed = false;
         return 1;
