@@ -7,7 +7,7 @@
     "lint": "../node_modules/.bin/eslint 'src/**/*.js' 'test/**/*.js'"
   },
   "description": "Play patches created with Modulib",
-  "main": "src/index.js",
+  "main": "src/play.js",
   "keywords": [
     "audio",
     "sound",
