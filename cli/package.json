@@ -1,6 +1,6 @@
 {
   "name": "modulib-cli",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "repository": "git@github.com:joukosaastamoinen/modulib",
   "type": "module",
   "scripts": {
@@ -21,7 +21,7 @@
     "play-patch": "src/index.js"
   },
   "dependencies": {
-    "modulib": "0.0.2",
+    "modulib": "0.0.3",
     "speaker": "0.5.2"
   }
 }

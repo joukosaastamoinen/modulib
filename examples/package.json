@@ -4,7 +4,7 @@
   "repository": "git@github.com:joukosaastamoinen/modulib",
   "type": "module",
   "dependencies": {
-    "modulib": "0.0.1"
+    "modulib": "0.0.3"
   },
   "author": "Jouko Saastamoinen <joukosaastamoinen@gmail.com>",
   "license": "MIT"
