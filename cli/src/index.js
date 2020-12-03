@@ -2,10 +2,10 @@
 
 import fs from "fs";
 import path from "path";
-import Keyboard from "./keyboard.js";
+import { keyboard } from "modulib";
 import playPatch from "./play-patch.js";
 
-const { frequency, trigger } = Keyboard(process.stdin);
+const { frequency, trigger } = keyboard(process.stdin);
 
 const patchPath = process.argv[2]
   ? path.join(process.cwd(), process.argv[2])
