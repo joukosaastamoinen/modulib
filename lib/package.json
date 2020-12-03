@@ -1,6 +1,6 @@
 {
   "name": "modulib",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Modular synthesis with JavaScript",
   "repository": "git@github.com:joukosaastamoinen/modulib.git",
   "type": "module",
