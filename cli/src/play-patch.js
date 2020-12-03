@@ -4,12 +4,11 @@ const playPatch = (path, inputs) => {
   let aborted = false;
   let stop = null;
 
-  import(`${path}?${Date.now()}`).then(({ default: Audio }) => {
+  import(`${path}?${Date.now()}`).then(({ default: patch }) => {
     if (aborted) {
       return;
     }
-    const audio = Audio(...inputs)();
-    stop = play(audio);
+    stop = play(patch(...inputs));
   });
 
   return () => {

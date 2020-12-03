@@ -1,7 +1,9 @@
 import { Readable } from "stream";
 import Speaker from "speaker";
 
-const play = (audio) => {
+const play = (Audio) => {
+  const audio = Audio();
+
   const sampleRate = 44100;
   const timeStep = 1 / sampleRate;
 
