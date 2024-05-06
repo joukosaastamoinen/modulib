@@ -2,7 +2,7 @@
 
 import fs from "fs";
 import path from "path";
-import { keyboard } from "modulib";
+import { keyboard, constant } from "modulib";
 import playPatch from "./play-patch.js";
 
 const { frequency, trigger } = keyboard(process.stdin);
