@@ -1,4 +1,4 @@
-import { constant, sine, triangle, amp } from "modulib";
+import { amp, constant, sine, triangle } from "modulib";
 
 export default () =>
   triangle(

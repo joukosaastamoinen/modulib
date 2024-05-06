@@ -19,5 +19,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  rules: {},
+  rules: {
+    "sort-imports": ["error"],
+  },
 };

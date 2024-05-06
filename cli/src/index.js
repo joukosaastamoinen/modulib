@@ -1,8 +1,8 @@
 #! /usr/bin/env node
 
+import { constant, keyboard } from "modulib";
 import fs from "fs";
 import path from "path";
-import { keyboard, constant } from "modulib";
 import playPatch from "./play-patch.js";
 
 const { frequency, trigger } = keyboard(process.stdin);

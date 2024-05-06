@@ -1,4 +1,4 @@
-import { constant, sine, triangle, amp } from "modulib";
+import { amp, constant, sine, triangle } from "modulib";
 
 const mod = amp(constant(220), sine(constant(3.7)));
 

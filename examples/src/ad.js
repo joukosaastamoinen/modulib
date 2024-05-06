@@ -1,4 +1,4 @@
-import { constant, sine, amp, ad, metronome } from "modulib";
+import { ad, amp, constant, metronome, sine } from "modulib";
 
 const bpm = 120;
 const tempo = constant(bpm / 60);
