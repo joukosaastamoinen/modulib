@@ -2,13 +2,16 @@
   "name": "modulib-monorepo",
   "private": true,
   "license": "MIT",
-  "devDependencies": {
-    "eslint": "7.14.0",
-    "eslint-config-prettier": "6.15.0",
-    "eslint-config-standard": "16.0.2",
-    "prettier": "2.2.0"
-  },
   "scripts": {
     "lint": "eslint --ignore-path .gitignore '**/*.js' && prettier --list-different '**/*.js'"
+  },
+  "devDependencies": {
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-config-standard": "17.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-n": "16.6.2",
+    "eslint-plugin-promise": "6.1.1",
+    "prettier": "3.2.5"
   }
 }
