@@ -13,5 +13,8 @@
     "eslint-plugin-n": "16.6.2",
     "eslint-plugin-promise": "6.1.1",
     "prettier": "3.2.5"
-  }
+  },
+  "workspaces": [
+    "./packages/*"
+  ]
 }
