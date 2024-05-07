@@ -5,20 +5,14 @@
   "repository": "git@github.com:joukosaastamoinen/modulib.git",
   "type": "module",
   "scripts": {
-    "test": "node test/run-tests.js | tap-dot",
-    "watch": "nodemon -q -x 'npm test'",
+    "test": "node --test",
+    "watch": "node --test --watch",
     "lint": "../node_modules/.bin/eslint 'src/**/*.js' 'test/**/*.js'",
     "perf": "node perf/index.js"
   },
   "author": "Jouko Saastamoinen <joukosaastamoinen@gmail.com>",
   "license": "MIT",
   "main": "src/index.js",
-  "devDependencies": {
-    "extend-tape": "1.2.0",
-    "nodemon": "2.0.6",
-    "tap-dot": "2.0.0",
-    "tape": "5.0.1",
-    "tape-catch": "1.0.6"
-  },
+  "devDependencies": {},
   "dependencies": {}
 }
