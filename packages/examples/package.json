@@ -1,5 +1,6 @@
 {
   "name": "modulib-examples",
+  "private": true,
   "description": "Examples of using Modulib to create generative audio",
   "repository": "git@github.com:joukosaastamoinen/modulib",
   "type": "module",
