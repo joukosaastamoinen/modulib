@@ -5,13 +5,14 @@
   "repository": "git@github.com:joukosaastamoinen/modulib.git",
   "type": "module",
   "scripts": {
+    "build": "tsc",
     "test": "node --test",
     "watch": "node --test --watch",
     "perf": "node perf/index.js"
   },
   "author": "Jouko Saastamoinen <joukosaastamoinen@gmail.com>",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "devDependencies": {},
   "dependencies": {}
 }
