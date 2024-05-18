@@ -4,6 +4,9 @@
   "repository": "git@github.com:joukosaastamoinen/modulib",
   "type": "module",
   "description": "Play patches created with Modulib",
+  "scripts": {
+    "build": "tsc"
+  },
   "main": "dist/play.js",
   "keywords": [
     "audio",
