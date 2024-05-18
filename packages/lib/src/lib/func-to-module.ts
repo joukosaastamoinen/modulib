@@ -36,6 +36,7 @@ const funcToModule =
 
       // use .apply instead of calling directly with args
       // spread (func(...args)), because it's faster
+      // eslint-disable-next-line prefer-spread
       return func.apply(null, args);
     };
   };

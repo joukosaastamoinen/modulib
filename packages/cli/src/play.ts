@@ -29,9 +29,10 @@ const play = (Audio: SignalGenerator) => {
       const val = Math.max(-1, Math.min(1, audio(timeStep))) * amplitude;
       for (let channel = 0; channel < this.channels; channel++) {
         const offset = i * sampleSize * this.channels + channel * sampleSize;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (buf[("writeInt" + this.bitDepth.toString() + "LE") as any] as any)(
           val,
-          offset,
+          offset
         );
       }
     }
