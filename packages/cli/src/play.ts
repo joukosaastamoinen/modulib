@@ -32,7 +32,7 @@ const play = (Audio: SignalGenerator) => {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (buf[("writeInt" + this.bitDepth.toString() + "LE") as any] as any)(
           val,
-          offset
+          offset,
         );
       }
     }
