@@ -1,15 +1,19 @@
 import constant from "../constant.js";
+import { SignalGenerator } from "../types.js";
 
 const oscillator =
-  (func) =>
-  (Frequency, Trigger = constant(0)) =>
+  (func: (phase: number) => number) =>
+  (
+    Frequency: SignalGenerator,
+    Trigger: SignalGenerator = constant(0),
+  ): SignalGenerator =>
   () => {
     const getFrequency = Frequency();
     const getTrigger = Trigger();
-    let frequency;
+    let frequency: number;
     let phase = 0;
-    return (step) => {
-      let previousFrequency = frequency;
+    return (step: number) => {
+      let previousFrequency: number | undefined = frequency;
       frequency = getFrequency(step);
       const trigger = getTrigger(step);
       if (trigger !== 0) {

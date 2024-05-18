@@ -3,9 +3,6 @@
   "version": "0.0.4",
   "repository": "git@github.com:joukosaastamoinen/modulib",
   "type": "module",
-  "scripts": {
-    "lint": "../node_modules/.bin/eslint 'src/**/*.js' 'test/**/*.js'"
-  },
   "description": "Play patches created with Modulib",
   "main": "src/play.js",
   "keywords": [

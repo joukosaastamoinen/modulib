@@ -1,6 +1,6 @@
 import oscillator from "./lib/oscillator.js";
 
-const square = (phase) => {
+const square = (phase: number) => {
   return phase % 1 < 0.5 ? 1 : -1;
 };
 

@@ -1,4 +1,4 @@
-const notes = {
+const notes: Record<number, number> = {
   97: 261.63, // C
   119: 277.18, // C#
   115: 293.66, // D
@@ -17,14 +17,14 @@ const notes = {
   112: 622.25, // D#
 };
 
-const Keyboard = (tty) => {
+const Keyboard = (tty: typeof process.stdin) => {
   const frequency = () => {
     let frequency = 0;
     let listening = false;
-    let timeout = null;
+    let timeout: NodeJS.Timeout | null = null;
 
-    const handler = (data) => {
-      const newFrequency = notes[data[0]];
+    const handler = (data: Buffer) => {
+      const newFrequency = data[0] && notes[data[0]];
       if (newFrequency !== undefined) {
         frequency = newFrequency;
       }
@@ -57,10 +57,10 @@ const Keyboard = (tty) => {
   const trigger = () => {
     let keyPressed = false;
     let listening = false;
-    let timeout = null;
+    let timeout: NodeJS.Timeout | null = null;
 
-    const handler = (data) => {
-      if (notes[data[0]] !== undefined) {
+    const handler = (data: Buffer) => {
+      if ((data[0] && notes[data[0]]) !== undefined) {
         keyPressed = true;
       }
     };

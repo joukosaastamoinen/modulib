@@ -1,3 +1,5 @@
+import { SignalGenerator } from "../types.js";
+
 /**
  * Convert any function to a module.
  *
@@ -14,22 +16,22 @@
  * ```
  */
 const funcToModule =
-  (func) =>
-  (...inputs) =>
+  (func: (...phases: number[]) => number) =>
+  (...inputs: SignalGenerator[]): SignalGenerator =>
   () => {
     const generators = inputs.map((fn) => fn());
-    const args = new Array(generators.length);
+    const args: number[] = new Array(generators.length);
 
     // Treat arities of 0 and 1 as special cases for better performance
     if (args.length === 0) {
       return func;
     } else if (args.length === 1) {
-      return (step) => func(generators[0](step));
+      return (step: number) => func(generators[0]!(step));
     }
-    return (step) => {
+    return (step: number) => {
       // Use for loop instead of Array.prototype.map, because it's faster
       for (let i = 0; i < generators.length; i++) {
-        args[i] = generators[i](step);
+        args[i] = generators[i]!(step);
       }
 
       // use .apply instead of calling directly with args

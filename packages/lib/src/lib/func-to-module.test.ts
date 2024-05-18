@@ -18,7 +18,7 @@ test("arity of 0", () => {
 test("arity of 1", () => {
   const timeStep = 234;
   const arg = 456;
-  const fn = (x) => x * 123;
+  const fn = (x: number) => x * 123;
   const generator = funcToModule(fn)(() => (step) => arg * step)();
 
   assert.equal(
@@ -32,7 +32,7 @@ test("arity of 2", () => {
   const timeStep = 123;
   const arg1 = 456;
   const arg2 = 786;
-  const fn = (a, b) => a * 123 + b * 456;
+  const fn = (a: number, b: number) => a * 123 + b * 456;
   const generator = funcToModule(fn)(
     () => (step) => arg1 * step,
     () => (step) => arg2 * step,

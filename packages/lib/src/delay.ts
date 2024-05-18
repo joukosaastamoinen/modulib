@@ -1,9 +1,14 @@
 import constant from "./constant.js";
+import { SignalGenerator } from "./types.js";
 
 const MAX_SAMPLES = 32768;
 
 const delay =
-  (Input, Amount = constant(1), Feedback = constant(0)) =>
+  (
+    Input: SignalGenerator,
+    Amount: SignalGenerator = constant(1),
+    Feedback: SignalGenerator = constant(0),
+  ): SignalGenerator =>
   () => {
     const getAmount = Amount();
     const getFeedback = Feedback();

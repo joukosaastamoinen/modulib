@@ -1,9 +1,15 @@
 import constant from "./constant.js";
+import { SignalGenerator } from "./types.js";
 
 const DEFAULT_THRESHOLD = 0.5;
 
 const ad =
-  (Attack, Decay, Trigger, Threshold = constant(DEFAULT_THRESHOLD)) =>
+  (
+    Attack: SignalGenerator,
+    Decay: SignalGenerator,
+    Trigger: SignalGenerator,
+    Threshold = constant(DEFAULT_THRESHOLD),
+  ): SignalGenerator =>
   () => {
     const attack = Attack();
     const decay = Decay();

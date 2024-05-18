@@ -8,7 +8,7 @@ test("one signal", () => {
   const signal = constant(value);
   const generator = mix(signal)();
 
-  assert.equal(generator(), value, "should return the signal as is");
+  assert.equal(generator(1), value, "should return the signal as is");
 });
 
 test("two signals", () => {
@@ -18,7 +18,7 @@ test("two signals", () => {
   const signalB = constant(valueB);
   const generator = mix(signalA, signalB)();
 
-  assert.equal(generator(), valueA + valueB, "should mix the two signals");
+  assert.equal(generator(1), valueA + valueB, "should mix the two signals");
 });
 
 test("three signals", () => {
@@ -30,5 +30,9 @@ test("three signals", () => {
   const signalC = constant(valueC);
   const generator = mix(signalA, signalB, signalC)();
 
-  assert.equal(generator(), valueA + valueB + valueC, "should mix all signals");
+  assert.equal(
+    generator(1),
+    valueA + valueB + valueC,
+    "should mix all signals",
+  );
 });

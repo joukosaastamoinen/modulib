@@ -8,3 +8,4 @@ export { default as mix } from "./mix.js";
 export { default as sine } from "./sine.js";
 export { default as square } from "./square.js";
 export { default as triangle } from "./triangle.js";
+export type { SignalGenerator } from "./types.js";
