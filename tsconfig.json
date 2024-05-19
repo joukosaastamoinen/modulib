@@ -3,7 +3,7 @@
     "target": "es2016",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "declaration": true,
+    "noEmit": true,
     "isolatedModules": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

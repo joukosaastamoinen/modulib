@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc"
   },
-  "main": "src/play.js",
+  "main": "dist/play.js",
   "keywords": [
     "audio",
     "sound",
