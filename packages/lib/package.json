@@ -12,7 +12,7 @@
   },
   "author": "Jouko Saastamoinen <joukosaastamoinen@gmail.com>",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "devDependencies": {},
   "dependencies": {}
 }
