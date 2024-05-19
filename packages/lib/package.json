@@ -5,7 +5,6 @@
   "repository": "git@github.com:joukosaastamoinen/modulib.git",
   "type": "module",
   "scripts": {
-    "build": "tsc",
     "test": "node --test",
     "watch": "node --test --watch",
     "perf": "node perf/index.js"

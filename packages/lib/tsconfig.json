@@ -1,10 +1,10 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../tsconfig.base.json",
   "include": ["src/**/*"],
   "exclude": ["**/*.test.ts"],
   "compilerOptions": {
-    "noEmit": false,
     "outDir": "./dist",
-    "declaration": true
+    "declaration": true,
+    "composite": true
   }
 }
